@@ -1,5 +1,5 @@
 
-![Slider](https://github.com/febeeh/Image-Slider-jQuery/blob/main/images/slider.png)
+![Slider](https://github.com/febeeh/Image-Slider/blob/main/images/slider.png)
 
 # Documentation :book: :
 

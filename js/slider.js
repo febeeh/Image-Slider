@@ -183,7 +183,6 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_left_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			right: "40px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).show();
@@ -196,7 +195,6 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_right_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			left: "40px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).show();
@@ -209,7 +207,6 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_top_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			top: "20px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).show();
@@ -222,7 +219,6 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_down_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_down_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			bottom: "20px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_down_slider).eq(i).animate({

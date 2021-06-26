@@ -3,8 +3,7 @@
 
 # Documentation :book: :
 
-* This Slider Is Developed Using [jQuery-Slider](https://github.com/febeeh/jQuery-Slider). Goto [jQuery-Slider](https://github.com/febeeh/jQuery-Slider) For More Details.
-
+* This Slider Is Developed Using [jQuery-Slider](https://github.com/febeeh/jQuery-Slider). Goto [jQuery-Slider](https://github.com/febeeh/jQuery-Slider) And Try To Develop Your Own Idea.
 # USAGE :memo: :
 
 **HTML**
@@ -104,4 +103,4 @@
 </div>
 ```
 
-* Download The Complete File And Test It Out :wink:
+***Download The Complete File And Test It Out :wink:***

@@ -15,9 +15,9 @@ var animateClass = {
 	slide_to_down_slider: ".slide-to-down-slider",
 	down_slide_speed: 500, // Down Slide Animation Speed (In Milliseconds)
 	fadeIn_slider: ".fadein-slider",
-	fadein_speed: 1000, // FadeIn Animation Speed (In Milliseconds)
+	fadein_speed: 500, // FadeIn Animation Speed (In Milliseconds)
 	fadeOut_slider: ".fadeout-slider",
-	fadeout_speed: 1000, // FadeOut Animation Speed (In Milliseconds)
+	fadeout_speed: 500, // FadeOut Animation Speed (In Milliseconds)
 };
 
 // Required Variable
@@ -140,12 +140,10 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_left_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			right: "40px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).show();
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).animate({
-			opacity: "1",
 			right: "0px"
 		}, animateClass.left_slide_speed);
 	});
@@ -153,12 +151,10 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_right_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			left: "40px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).show();
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).animate({
-			opacity: "1",
 			left: "0px"
 		}, animateClass.right_slide_speed);
 	});
@@ -166,12 +162,10 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_top_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			top: "20px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).show();
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).animate({
-			opacity: "1",
 			top: "0px"
 		}, animateClass.top_slide_speed);
 	});
@@ -179,11 +173,9 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_down_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_down_slider).eq(i).css({
 			position: "relative",
-			opacity: "0",
 			bottom: "20px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_down_slider).eq(i).animate({
-			opacity: "1",
 			bottom: "0px"
 		}, animateClass.down_slide_speed);
 

@@ -1,3 +1,9 @@
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+//                                                                                                                // 
+//                                  This Code Is Developed By Febeeh Parambatt                                    //	
+//                       For More Details Visit https://github.com/febeeh/jQuery-YGSlider                         //
+//                                                                                                                // 
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 // Main Class
 var mainClass = {
 	slider: ".slideme", // Enter here class name of slider ( Add this class name on each respective object classes)
@@ -7,9 +13,9 @@ var mainClass = {
 // Animation Class
 var animateClass = {
 	slide_to_left_slider: ".slide-to-left-slider",
-	left_slide_speed: 500, // Left Slide Animation Speed (In Milliseconds)
+	left_slide_speed: 600, // Left Slide Animation Speed (In Milliseconds)
 	slide_to_right_slider: ".slide-to-right-slider",
-	right_slide_speed: 500, // right Slide Animation Speed (In Milliseconds)
+	right_slide_speed: 600, // right Slide Animation Speed (In Milliseconds)
 	slide_to_top_slider: ".slide-to-top-slider",
 	top_slide_speed: 500, // Top Slide Animation Speed (In Milliseconds)
 	slide_to_down_slider: ".slide-to-down-slider",
@@ -24,10 +30,12 @@ var animateClass = {
 var total_len = $(mainClass.slider).length;
 var sliderprev = 0;
 if (screen.width <= '1243' && screen.width > '939') {
-//Configuration
+	//Configuration
 	var config = {
 		objPerSlide: 3, // Enter Here Total Number Object To Be shown In Each Slides
-	}	
+		autoSlide: true, // true - To Enable Auto Slide, false - To Disable Auto Slide
+		autoSlide_delay: '5000', // Enter Auto Slide Delay In Millisecond
+	}
 	var total_slider = config.objPerSlide;
 	var slidercount = total_slider;
 	hideSlider(); // Hide All Slider
@@ -42,9 +50,12 @@ if (screen.width <= '1243' && screen.width > '939') {
 		leftAction(total_slider); // Left Button Action 
 	});
 } else if (screen.width <= '939' && screen.width > '629') {
+	//Configuration
 	var config = {
 		objPerSlide: 2, // Enter Here Total Number Object To Be shown In Each Slides
-	}	
+		autoSlide: true, // true - To Enable Auto Slide, false - To Disable Auto Slide
+		autoSlide_delay: '5000', // Enter Auto Slide Delay In Millisecond
+	}
 	var total_slider = config.objPerSlide;
 	var slidercount = total_slider;
 	hideSlider(); // Hide All Slider
@@ -59,9 +70,12 @@ if (screen.width <= '1243' && screen.width > '939') {
 		leftAction(total_slider); // Left Button Action 
 	});
 } else if (screen.width <= '629') {
+	//Configuration
 	var config = {
 		objPerSlide: 1, // Enter Here Total Number Object To Be shown In Each Slides
-	}	
+		autoSlide: true, // true - To Enable Auto Slide, false - To Disable Auto Slide
+		autoSlide_delay: '5000', // Enter Auto Slide Delay In Millisecond
+	}
 	var total_slider = config.objPerSlide;
 	var slidercount = total_slider;
 	hideSlider(); // Hide All Slider
@@ -76,9 +90,12 @@ if (screen.width <= '1243' && screen.width > '939') {
 		leftAction(total_slider); // Left Button Action 
 	});
 } else {
+	//Configuration
 	var config = {
 		objPerSlide: 4, // Enter Here Total Number Object To Be shown In Each Slides
-	}	
+		autoSlide: true, // true - To Enable Auto Slide, false - To Disable Auto Slide
+		autoSlide_delay: '5000', // Enter Auto Slide Delay In Millisecond
+	}
 	var total_slider = config.objPerSlide;
 	var slidercount = total_slider;
 	hideSlider(); // Hide All Slider
@@ -196,35 +213,36 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_left_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).css({
 			position: "relative",
-			right: "40px"
+			left: "30px",
+			opacity: 0,
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).show();
 		$(mainClass.slider + " " + animateClass.slide_to_left_slider).eq(i).animate({
-			opacity: "1",
-			right: "0px"
+			left: "0px",
+			opacity: 1,
 		}, animateClass.left_slide_speed);
 	});
 	// Slide To Right Animation
 	$(mainClass.slider + " " + animateClass.slide_to_right_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).css({
 			position: "relative",
-			left: "40px"
+			right: "30px",
+			opacity: 0,
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).show();
 		$(mainClass.slider + " " + animateClass.slide_to_right_slider).eq(i).animate({
-			opacity: "1",
-			left: "0px"
+			right: "0px",
+			opacity: 1,
 		}, animateClass.right_slide_speed);
 	});
 	// Slide To Top Animation
 	$(mainClass.slider + " " + animateClass.slide_to_top_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).css({
 			position: "relative",
-			top: "20px"
+			top: "40px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).show();
 		$(mainClass.slider + " " + animateClass.slide_to_top_slider).eq(i).animate({
-			opacity: "1",
 			top: "0px"
 		}, animateClass.top_slide_speed);
 	});
@@ -232,8 +250,7 @@ function sliderAnimate() {
 	$(mainClass.slider + " " + animateClass.slide_to_down_slider).each(function (i) {
 		$(mainClass.slider + " " + animateClass.slide_to_down_slider).eq(i).css({
 			position: "relative",
-
-			bottom: "20px"
+			bottom: "40px"
 		});
 		$(mainClass.slider + " " + animateClass.slide_to_down_slider).eq(i).animate({
 			opacity: "1",
@@ -242,23 +259,37 @@ function sliderAnimate() {
 
 	});
 }
-function resetAnimation(){
-	$(mainClass.slider + " " + animateClass.fadeIn_slider).each(function() {
+function resetAnimation() {
+	$(mainClass.slider + " " + animateClass.fadeIn_slider).each(function () {
 		$(this).stop(); // Stop Animating
 	});
-	$(mainClass.slider + " " + animateClass.fadeOut_slider).each(function() {
+	$(mainClass.slider + " " + animateClass.fadeOut_slider).each(function () {
 		$(this).stop(); // Stop Animating
 	});
-	$(mainClass.slider + " " + animateClass.slide_to_left_slider).each(function() {
+	$(mainClass.slider + " " + animateClass.slide_to_left_slider).each(function () {
 		$(this).stop(); // Stop Animating
 	});
-	$(mainClass.slider + " " + animateClass.slide_to_right_slider).each(function() {
+	$(mainClass.slider + " " + animateClass.slide_to_right_slider).each(function () {
 		$(this).stop(); // Stop Animating
 	});
-	$(mainClass.slider + " " + animateClass.slide_to_top_slider).each(function() {
+	$(mainClass.slider + " " + animateClass.slide_to_top_slider).each(function () {
 		$(this).stop(); // Stop Animating
 	});
-	$(mainClass.slider + " " + animateClass.slide_to_down_slider).each(function() {
+	$(mainClass.slider + " " + animateClass.slide_to_down_slider).each(function () {
 		$(this).stop(); // Stop Animating
+	});
+}
+if (config.autoSlide == true) {
+	console.log(config.autoSlide);
+	var autoSlide = setInterval(function () {
+		rightAction(total_slider);
+	}, config.autoSlide_delay);
+	$(mainClass.slider).mouseover(function () {
+		clearInterval(autoSlide);
+	});
+	$(mainClass.slider).mouseout(function () {
+		autoSlide = setInterval(function () {
+			rightAction(total_slider);
+		}, config.autoSlide_delay);
 	});
 }

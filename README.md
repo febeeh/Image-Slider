@@ -3,7 +3,7 @@
 
 # Documentation :book: :
 
-* This Slider Is Developed Using [jQuery-Slider](https://github.com/febeeh/jQuery-Slider). Goto [jQuery-Slider](https://github.com/febeeh/jQuery-Slider) And Try To Develop Your Own Idea.
+* This Slider Is Developed Using [jQuery-YGSlider](https://github.com/febeeh/jQuery-YGSlider). Goto [jQuery-YGSlider](https://github.com/febeeh/jQuery-YGSlider) And Try To Develop Your Own Idea.
 # USAGE :memo: :
 
 **HTML**
